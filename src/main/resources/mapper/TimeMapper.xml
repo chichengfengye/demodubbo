@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jf.demodubbo.mapper.TimeMapper">
+
+    <insert id="insertTime" parameterType="java.util.Date" >
+      insert into timetest(time_stamp, time_stamp_tz) values(#{nowtime}, #{nowtime})
+    </insert>
+
+    <select id="selectLast" resultType="com.jf.demodubbo.entity.TimeRecord">
+        select id, time_stamp, time_stamp_tz from timetest
+        order by id desc limit 1 offset 0
+    </select>
+
+    <select id="selectRows" resultType="com.jf.demodubbo.entity.TimeRecord">
+        select id, time_stamp, time_stamp_tz from timetest
+        order by id
+    </select>
+
+</mapper>

@@ -5,6 +5,8 @@ import com.jf.demodubbo.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class HelloServiceConsumer implements HelloService {
     @Autowired
@@ -15,5 +17,17 @@ public class HelloServiceConsumer implements HelloService {
         HelloService helloService = referenceConfig.get(); // 注意：此代理对象内部封装了所有通讯细节，对象较重，请缓存复用
         String result = helloService.hello(name);
         return result;
+    }
+
+    @Override
+    public String selectLast() {
+        HelloService helloService = referenceConfig.get(); // 注意：此代理对象内部封装了所有通讯细节，对象较重，请缓存复用
+        return helloService.selectLast();
+    }
+
+    @Override
+    public List<String> selectRows() {
+        HelloService helloService = referenceConfig.get(); // 注意：此代理对象内部封装了所有通讯细节，对象较重，请缓存复用
+        return helloService.selectRows();
     }
 }

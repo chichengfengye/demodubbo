@@ -1,2 +1,16 @@
 server:
   port: 80
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.jf.demodubbo.entity
+  configuration:
+    map-underscore-to-camel-case: true
+
+spring:
+  datasource:
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/exg
+    type: com.alibaba.druid.pool.DruidDataSource
