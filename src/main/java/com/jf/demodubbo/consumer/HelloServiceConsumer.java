@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Service("HelloServiceConsumer")
 public class HelloServiceConsumer implements HelloService {
     @Autowired
     private ReferenceConfig<HelloService> referenceConfig;

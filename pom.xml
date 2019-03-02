@@ -16,7 +16,8 @@
 
     <properties>
         <java.version>11</java.version>
-        <dubbo.version>2.7.0</dubbo.version>
+        <druid.version>1.1.12</druid.version>
+        <dubbo.version>2.6.5</dubbo.version>
         <!--<dubbo.version>2.7.0</dubbo.version>-->
     </properties>
 
@@ -47,7 +48,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>dubbo</artifactId>
-            <version>2.6.5</version>
+            <version>${dubbo.version}</version>
             <scope>compile</scope>
         </dependency>
 
@@ -65,7 +66,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
-            <version>1.1.12</version>
+            <version>${druid.version}</version>
         </dependency>
     <!--    <dependency>
             <groupId>org.apache.dubbo</groupId>
