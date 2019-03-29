@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ApplicationInitializer implements ApplicationRunner {
     @Autowired
-    @Qualifier("helloServiceConfig")
+    @Qualifier("helloServiceConfigZookeeper")
     private ServiceConfig<HelloService> serviceServiceConfig;
 
     @Override

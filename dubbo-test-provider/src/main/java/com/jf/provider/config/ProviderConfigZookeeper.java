@@ -21,7 +21,7 @@ public class ProviderConfigZookeeper {
 // 连接注册中心配置
         RegistryConfig registry = new RegistryConfig();
 //        registry.setAddress("N/A");
-        registry.setAddress("192.168.171.8:2181");
+        registry.setAddress("zookeeper://192.168.171.8:2181");
         registry.setUsername("jf");
         registry.setPassword("jf");
 
@@ -44,6 +44,6 @@ public class ProviderConfigZookeeper {
 
 // 暴露及注册服务
         return service;
-//        service.export();
+//        service.export();f
     }
 }

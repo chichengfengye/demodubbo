@@ -18,7 +18,7 @@ public class ConsumerConfigWithZookeeper {
         // 连接注册中心配置
         RegistryConfig registry = new RegistryConfig();
 //        registry.setAddress("N/A");不用注册中心
-        registry.setAddress("192.168.171.8:2181");
+        registry.setAddress("zookeeper://192.168.171.8:2181");
         registry.setUsername("jf");
         registry.setPassword("jf");
 

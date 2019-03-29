@@ -11,7 +11,7 @@ import java.util.List;
 @Service("HelloServiceConsumer")
 public class HelloServiceConsumer implements HelloService {
     @Autowired
-    @Qualifier("helloServiceProxy")
+    @Qualifier("helloServiceProxyRegistered")
     private ReferenceConfig<HelloService> referenceConfig;
 
     @Override
