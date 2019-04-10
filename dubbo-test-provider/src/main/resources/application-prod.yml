@@ -12,5 +12,5 @@ spring:
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://192.168.99.137:5432/postgres
+    url: jdbc:postgresql://192.168.171.1:5432/postgres
     type: com.alibaba.druid.pool.DruidDataSource
