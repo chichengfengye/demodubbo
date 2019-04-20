@@ -9,6 +9,12 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ConsumerConfigNoRegistry {
+    /**
+     * 也可以直接暴露.get()返回helloservice
+     * 我这里现在只不过是为了做多个测试，所以才会这样只写reference的
+     * 返回对象
+     * @return
+     */
     @Bean("helloServiceProxy")
     public ReferenceConfig<HelloService> consumer() {
         // 当前应用配置
